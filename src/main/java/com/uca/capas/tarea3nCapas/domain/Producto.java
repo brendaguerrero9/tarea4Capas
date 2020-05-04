@@ -20,6 +20,7 @@ public class Producto {
 	String marca;
 	
 	@Size(min=1,max=500, message="La descripcion debe de tener entre 1 y 500 caracteres")
+	@NotEmpty(message= "Se requiere llenar este campo")
 	String descripcion;
 	
 	@Digits(fraction = 0, integer = 10, message ="Las existencias no pueden ser decimales")
@@ -70,7 +71,7 @@ public class Producto {
 		return descripcion;
 	}
 
-	public void setDescrpcion(String descripcion) {
+	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
